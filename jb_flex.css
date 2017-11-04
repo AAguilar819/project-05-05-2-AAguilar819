@@ -11,3 +11,59 @@
 */
 
 /*Navs*/
+
+/*FIx*/
+
+ul#submenu {
+  display: none;
+}
+
+a#submenuTitle:hover+ul#submenu, ul#submenu:hover {
+  display: block;
+}
+
+/*=========================================
+             Mobile Devices 480px and lower
+=========================================*/
+
+@media only screen and (max-width: 480px) {
+  body img.logo1 {
+    background-color: rgb(46, 209, 194);
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body img.logo2 {
+    display: none;
+  }
+  nav.horizontal ul li a {
+    background-color: rgb(24, 56, 194);
+    color: rgb(169, 238, 240);
+    text-align: center;
+    display: block;
+    padding: 5px 0;
+  }
+}
+
+/*=========================================
+Tablet and Desktop Devices 481px and higher
+=========================================*/
+
+@media only screen and (min-width: 481px) {
+  section.shop {
+    border: 3px solid brown;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    align-self: flex-end;
+  }
+  section article.right {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+}
+
+/*FIx*/
