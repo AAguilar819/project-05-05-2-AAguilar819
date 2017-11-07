@@ -13,6 +13,9 @@
 /*HTML*/
 
 html {
+  background-image: url(https://c.pxhere.com/photos/94/b7/water_sea_background_texture_greece-677700.jpg!d);
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: rgb(22, 182, 210)
 }
 
@@ -21,7 +24,7 @@ html {
 body {
   width: 95%;
   max-width: 1100px;
-  min-width: 768px;
+  min-width: 481px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(247, 247, 174);
@@ -38,14 +41,21 @@ img.logo2 {
   width: 64.4%;
 }
 
-article.right {
-  /*float: right;*/
-  width: 84%;
+article.right, article.info {
+  float: right;
+  width: 62%;
+  padding: 1%;
+}
+
+article.left {
+  float: left;
+  width: 33%;
+  border-right: 3px dashed blue;
+  background-color: rgb(146, 126, 65);
+  padding: 1%;
 }
 
 /*Nav*/
-
-/*FIx*/
 
 ul#submenu {
   display: none;
@@ -54,8 +64,6 @@ ul#submenu {
 a#submenuTitle:hover+ul#submenu, ul#submenu:hover {
   display: block;
 }
-
-/*FIx*/
 
 a {
   text-decoration: none;
@@ -71,6 +79,10 @@ nav.horizontal ul li a {
   padding: 5px 0;
 }
 
+/*nav.horizontal ul li ul li ul.5 li a {
+  width: 20%;
+}*/
+
 nav.horizontal ul li:visited a, nav.horizontal ul li:hover a {
   background-color: rgb(24, 47, 144);
   color: rgb(95, 209, 213);
@@ -79,19 +91,4 @@ nav.horizontal ul li:visited a, nav.horizontal ul li:hover a {
 nav.horizontal ul li:active a {
   background-color: rgb(77, 108, 238);
   color: rgb(186, 226, 228);
-}
-
-section.shop {
-  background-color: rgb(215, 214, 62);
-  float: right;
-  width: 15%;
-  text-align: right;
-  display: inline-block;
-}
-
-section.shop nav.shop ul li a {
-  color: rgb(133, 115, 20);
-  text-align: center;
-  display: block;
-  padding: 5px 0;
 }

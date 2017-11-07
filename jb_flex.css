@@ -12,14 +12,8 @@
 
 /*Navs*/
 
-/*FIx*/
-
-ul#submenu {
+a#navicon {
   display: none;
-}
-
-a#submenuTitle:hover+ul#submenu, ul#submenu:hover {
-  display: block;
 }
 
 /*=========================================
@@ -28,13 +22,27 @@ a#submenuTitle:hover+ul#submenu, ul#submenu:hover {
 
 @media only screen and (max-width: 480px) {
   body img.logo1 {
-    background-color: rgb(46, 209, 194);
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
   }
   body img.logo2 {
     display: none;
+  }
+  /*FIX*/
+  /*a#navicon {
+    display: block;
+  }
+  nav.horizontal ul {
+    display: none;
+  }
+  a#navicon:hover+ul, nav.horizontal ul:hover {
+    display: block;
+  }*/
+  /*FIX*/
+  ul#submenu {
+    display: none;
+  }
+  a#submenuTitle:hover+ul#submenu, ul#submenu:hover {
+    display: block;
   }
   nav.horizontal ul li a {
     background-color: rgb(24, 56, 194);
@@ -42,6 +50,13 @@ a#submenuTitle:hover+ul#submenu, ul#submenu:hover {
     text-align: center;
     display: block;
     padding: 5px 0;
+    width: 100%;
+  }
+  section.slang {
+    display: none;
+  }
+  article.right, article.info {
+    width: 98%;
   }
 }
 
@@ -50,20 +65,15 @@ Tablet and Desktop Devices 481px and higher
 =========================================*/
 
 @media only screen and (min-width: 481px) {
-  section.shop {
-    border: 3px solid brown;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    align-self: flex-end;
+  ul#mainmenu>li {
+    float: left;
+    position: relative;
+    width: 20%;
   }
-  section article.right {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
+  ul#submenu {
+    width: 76.45%;
+    box-shadow: rgb(51, 51, 51) 5px 5px 15px;
+    position: absolute;
+    top: 31.4%;
   }
 }
-
-/*FIx*/
