@@ -51,6 +51,7 @@ article.left {
   float: left;
   width: 33%;
   border-right: 3px dashed blue;
+  border-bottom: 3px dashed blue;
   background-color: rgb(146, 126, 65);
   padding: 1%;
 }
