@@ -69,6 +69,7 @@ Tablet and Desktop Devices 481px and higher
   /*FIX*/
   nav.horizontal ul li:link {
     display: flex;
+    flex-flow: row nowrap;
   }
   ul#mainmenu>li {
     float: left;
@@ -79,7 +80,11 @@ Tablet and Desktop Devices 481px and higher
     width: 76.45%;
     box-shadow: rgb(51, 51, 51) 5px 5px 15px;
     position: absolute;
+    float: left;
     top: 31.4%;
   }
   /*FIX*/
+}
+
+/
 }
