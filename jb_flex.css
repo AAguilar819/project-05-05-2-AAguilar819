@@ -21,6 +21,11 @@ a#navicon {
 =========================================*/
 
 @media only screen and (max-width: 480px) {
+  nav {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 auto;
+  }
   body img.logo1 {
     width: 100%;
   }
@@ -28,16 +33,16 @@ a#navicon {
     display: none;
   }
   /*FIX*/
-  /*a#navicon {
+  a#navicon {
     display: block;
     background-color: rgb(24, 56, 194);
   }
-  nav.horizontal ul {
+  nav.horizontal ul.major {
     display: none;
   }
   a#navicon:hover+ul, nav.horizontal ul:hover {
     display: block;
-  }*/
+  }
   /*FIX*/
   ul#submenu {
     display: none;
@@ -50,14 +55,21 @@ a#navicon {
     color: rgb(169, 238, 240);
     text-align: center;
     display: block;
-    padding: 5px 0;
+    padding: 10px 0;
     width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
   }
   section.slang {
     display: none;
   }
   article.right, article.info {
+    padding: 5px;
     width: 98%;
+  }
+  article.info a.info {
+    font-size: 1.5em;
+    line-height: 1.5em;
   }
 }
 
@@ -66,25 +78,22 @@ Tablet and Desktop Devices 481px and higher
 =========================================*/
 
 @media only screen and (min-width: 481px) {
-  /*FIX*/
   nav.horizontal ul li:link {
     display: flex;
     flex-flow: row nowrap;
   }
   ul#mainmenu>li {
     float: left;
-    position: relative;
     width: 20%;
   }
+  li {
+    position: relative;
+  }
   ul#submenu {
-    width: 76.45%;
+    width: 100%;
     box-shadow: rgb(51, 51, 51) 5px 5px 15px;
     position: absolute;
     float: left;
-    top: 31.4%;
+    top: 24px;
   }
-  /*FIX*/
-}
-
-/
 }
