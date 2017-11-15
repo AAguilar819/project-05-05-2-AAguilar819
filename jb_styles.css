@@ -17,6 +17,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgb(22, 182, 210)
+  /*This sets the image for the background and a color if the image fails to load.*/
 }
 
 /*Page Body*/
@@ -35,6 +36,7 @@ body {
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
   content: "";
   display: table;
+  /*The first 4 style rules place the entire body in a flexbox. The next 3 set the width to 95% of the webpage, unless it exceeds 110px or falls to the end of the media query. The next 2 lines center the page by having both side margins automatically calculated. The next line sets the body color to a sand-like color.  The next line was an attempt to add a font family, but all this did was make the entire text be sans-serif. The last 2 lines, sadly apparently undo the flexbox, but it keeps the entire page stable.*/
 }
 
 img.logo1 {
@@ -45,11 +47,15 @@ img.logo2 {
   width: 64.4%;
 }
 
+/*These 2 style rules balance the images so they end up being roughly the same size no matter what width the page has.*/
+
 article.right, article.info {
   float: right;
   width: 62%;
   padding: 1%;
 }
+
+/*This makes the text float to the right with 1% of the 62% of width being padding.*/
 
 article.left {
   float: left;
@@ -59,6 +65,8 @@ article.left {
   background-color: rgb(146, 126, 65);
   padding: 1%;
 }
+
+/*This makes the surfer sland float to the left with a width of 33% and 1% of that being padding. It also adds a different bacground color and borders with a dashed blue folor to the bottom and right sides of the element.*/
 
 /*Nav*/
 
@@ -70,9 +78,13 @@ a#submenuTitle:hover+ul#submenu, ul#submenu:hover {
   display: block;
 }
 
+/*These 2 style rules make the nav able to be a dropdown navigation.*/
+
 a {
   text-decoration: none;
 }
+
+/*This just removes the underline from links.*/
 
 nav.horizontal ul li a {
   background-color: rgb(24, 56, 194);
@@ -84,9 +96,7 @@ nav.horizontal ul li a {
   padding: 5px 0;
 }
 
-/*nav.horizontal ul li ul li ul.5 li a {
-  width: 20%;
-}*/
+/*This gives the nav a background and text color different types of blue. It also floats it all to the left with a width of 1/6 of the body so that the nav could be a horizontal nav. The display keeps it looking like a block element, the padding gives some space, and the text-align makes the text centered.*/
 
 nav.horizontal ul li:visited a, nav.horizontal ul li:hover a {
   background-color: rgb(24, 47, 144);
@@ -97,3 +107,18 @@ nav.horizontal ul li:active a {
   background-color: rgb(77, 108, 238);
   color: rgb(186, 226, 228);
 }
+
+/*These 2 style rules give the nav some different tints and tones of color depending on what is being done to it.*/
+
+/*Footer*/
+
+footer {
+  clear: both;
+  border-top: 2px solid rgb(96, 128, 242);
+  background-color: rgb(175, 151, 91);
+  color: rgb(219, 199, 112);
+  text-align: center;
+  padding: 10px 0;
+}
+
+/*This makes the footer go to the bottom with a centered text. It also gives a border to the top, and colors that, the background, and the text. This comes with padding for looks.*/

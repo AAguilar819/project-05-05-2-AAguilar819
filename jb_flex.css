@@ -16,23 +16,29 @@ a#navicon {
   display: none;
 }
 
+/*This makes the nav icon invisible by default.*/
+
 /*=========================================
              Mobile Devices 480px and lower
 =========================================*/
 
 @media only screen and (max-width: 480px) {
   nav {
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
   }
+  /*This lets the nav stretch with rescaling.*/
   body img.logo1 {
     width: 100%;
   }
   body img.logo2 {
     display: none;
   }
-  /*FIX*/
+  /*These 2 make only the actual logo visible with it taking up the entire screen.*/
   a#navicon {
     display: block;
     background-color: rgb(24, 56, 194);
@@ -43,34 +49,28 @@ a#navicon {
   a#navicon:hover+ul, nav.horizontal ul:hover {
     display: block;
   }
-  /*FIX*/
-  ul#submenu {
-    display: none;
-  }
-  a#submenuTitle:hover+ul#submenu, ul#submenu:hover {
-    display: block;
-  }
+  /*These 3 make the navicon on mobile functional.*/
   nav.horizontal ul li a {
-    background-color: rgb(24, 56, 194);
-    color: rgb(169, 238, 240);
-    text-align: center;
-    display: block;
     padding: 10px 0;
     width: 100%;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
   }
+  /*This makes sure that the nav is displayed in a more mobile-friendly fashion. It also adds borders for better separation.*/
   section.slang {
     display: none;
   }
+  /*This hides the surfer slang.*/
   article.right, article.info {
     padding: 5px;
     width: 98%;
   }
+  /*This resizes the other articles to take advantage of the extra space.*/
   article.info a.info {
     font-size: 1.5em;
     line-height: 1.5em;
   }
+  /*This makes the email and phone number larger for better mobile convenience.*/
 }
 
 /*=========================================
@@ -79,9 +79,12 @@ Tablet and Desktop Devices 481px and higher
 
 @media only screen and (min-width: 481px) {
   nav.horizontal ul li:link {
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-flow: row nowrap;
     flex-flow: row nowrap;
   }
+  /*This adds a flexbox to the nav.*/
   ul#mainmenu>li {
     float: left;
     width: 20%;
@@ -96,4 +99,5 @@ Tablet and Desktop Devices 481px and higher
     float: left;
     top: 24px;
   }
+  /*These 3 make the dropdown list actually be seperate and not take up extra space from the page.*/
 }
